@@ -1,4 +1,10 @@
 terraform {
+  backend "azurerm" {
+        resource_group_name ="rg-Prashant"
+        storage_account_name = "prashantstorageacc"
+        container_name = "prashantcontainer"
+        key = "prashant.tfstate"
+  }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
